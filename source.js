@@ -109,7 +109,7 @@ objectOfTruth.name = "objectOfTruth";
   willsUtils.resort = resort;
 })();
 
-(function() {
+(function () {
   willsUtils.questionTwo = () => {
     clear();
     console.log("The console has come preloaded with two varibales: `toBeSorted` and `objectOfTruth`. See Below");
@@ -118,18 +118,38 @@ objectOfTruth.name = "objectOfTruth";
     console.log("To sort the list, use the function at willsUtils.resort(toBeSorted, objectOfTruth);")
     console.log("I've done just that below.");
     let tempArr = willsUtils.resort(toBeSorted, objectOfTruth);
-    console.log(tempArr); 
+    console.log(tempArr);
     console.log("The function is designed to leave out an element if its `keyOfTruth` property can't be found in the `objectOfTruth.order` list.");
-    console.log("But it will tell you when its done so.");    
+    console.log("But it will tell you when its done so.");
     console.log("e.g.");
-    toBeSorted.push({name: "Kyle", age: 49})
+    toBeSorted.push({ name: "Kyle", age: 49 })
     console.log("Adding {name: \"Kyle\", age: 49} to the list");
-    console.log("And run method...");    
+    console.log("And run method...");
     willsUtils.resort(toBeSorted, objectOfTruth);
-    console.log("Gone but not forgotten!");    
+    console.log("Gone but not forgotten!");
     toBeSorted.pop();
   }
 })();
 //Stuff for question two /\ /\ /\ /\ /\ /\ /\ /\ 
 
 //Stuff for question three \/ \/ \/ \/ \/ \/ \/ \/
+(function () {
+  const isSpaceEven = (column, row) => {
+    return ((column + row) % 2) === 0; 
+  }
+  const printChessBoard = (size = 8) => {    
+    for(let x = 0; x < size; x++){
+      let printString = "";
+      for(let y = 0; y < size; y++){
+        printString = printString.concat("|");
+        printString = printString.concat(isSpaceEven(x,y) ? "#" : " ");
+        printString = printString.concat("|")
+        if(y !== size - 1){
+          printString = printString.concat(" ");
+        }        
+      }
+      console.log(printString);
+    }
+  }
+  willsUtils.printChessBoard = printChessBoard;
+})();
