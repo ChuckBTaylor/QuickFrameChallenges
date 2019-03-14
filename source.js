@@ -17,14 +17,13 @@ myArr.name = "myArr";
   willsUtils.questionOne = () => {
     console.clear();
     console.log("For Question 1, I have already declared a variable `myArr` that has come preloaded with `.map()`")
-    console.log("myArr starts as: [1, 2, 4, 6, 10]");
+    console.log("myArr starts as:");
+    console.log(myArr);
     console.log("Below you see the result of myArr.map(it => it * it);");
-    myArr.map = willsUtils.map;
-    (function () {
-      let tempArr = myArr.map(it => it * it);
-      console.log(tempArr);
-    })()
-    console.log("In order to test this on a different list, assign myArr to a new list or create a new list and assign willsUtils.map to its `.map` property.");
+    myArr.map = willsUtils.map;    
+    let tempArr = myArr.map(it => it * it);
+    console.log(tempArr);
+    console.log("In order to test this on a different list, create a new list and assign willsUtils.map to its `.map` property.");
     console.log("E.g.");
     console.log("let myNewArr = ['A', 'B', 'C'];");
     console.log("myNewArr.map = willsUtils.map;");
