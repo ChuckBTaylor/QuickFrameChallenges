@@ -13,25 +13,23 @@ myArr.name = "myArr";
   }
 })();
 
-(function () {
-  willsUtils.questionOne = () => {
-    console.clear();
-    console.log("For Question 1, I have already declared a variable `myArr` that has come preloaded with `.map()`")
-    console.log("myArr starts as:");
-    console.log(myArr);
-    console.log("Below you see the result of myArr.map(it => it * it);");
-    myArr.map = willsUtils.map;    
-    let tempArr = myArr.map(it => it * it);
-    console.log(tempArr);
-    console.log("In order to test this on a different list, create a new list and assign willsUtils.map to its `.map` property.");
-    console.log("E.g.");
-    console.log("let myNewArr = ['A', 'B', 'C'];");
-    console.log("myNewArr.map = willsUtils.map;");
-    console.log("myNewArr.map(it => ...);")
-  }
-})();
+willsUtils.questionOne = () => {
+  console.clear();
+  console.log("For Question 1, I have already declared a variable `myArr` that has come preloaded with `.map()`")
+  console.log("myArr starts as:");
+  console.log(myArr);
+  console.log("Below you see the result of myArr.map(it => it * it);");
+  myArr.map = willsUtils.map;
+  let tempArr = myArr.map(it => it * it);
+  console.log(tempArr);
+  console.log("In order to test this on a different list, create a new list and assign willsUtils.map to its `.map` property.");
+  console.log("E.g.");
+  console.log("let myNewArr = ['A', 'B', 'C'];");
+  console.log("myNewArr.map = willsUtils.map;");
+  console.log("myNewArr.map(it => ...);")
+}
 
-function clickQuestionOne(){
+function clickQuestionOne() {
   willsUtils.questionOne();
 }
 //Stuff for question one /\ /\ /\ /\ /\ /\ /\ /\ 
@@ -112,28 +110,26 @@ objectOfTruth.name = "objectOfTruth";
   willsUtils.resort = resort;
 })();
 
-(function () {
-  willsUtils.questionTwo = () => {
-    console.clear();
-    console.log("The console has come preloaded with two varibales: `toBeSorted` and `objectOfTruth`. See Below");
-    console.log(toBeSorted);
-    console.log(objectOfTruth);
-    console.log("To sort the list, use the function at willsUtils.resort(toBeSorted, objectOfTruth);")
-    console.log("I've done just that below.");
-    let tempArr = willsUtils.resort(toBeSorted, objectOfTruth);
-    console.log(tempArr);
-    console.log("The function is designed to leave out an element if its `keyOfTruth` property can't be found in the `objectOfTruth.order` list.");
-    console.log("But it will tell you when its done so.");
-    console.log("e.g.");
-    toBeSorted.push({ name: "Kyle", age: 49 })
-    console.log("Adding {name: \"Kyle\", age: 49} to the list");
-    console.log("And run method...");
-    willsUtils.resort(toBeSorted, objectOfTruth);
-    console.log("Gone but not forgotten!");
-    toBeSorted.pop();
-  }
-})();
-function clickQuestionTwo(){
+willsUtils.questionTwo = () => {
+  console.clear();
+  console.log("The console has come preloaded with two varibales: `toBeSorted` and `objectOfTruth`. See Below");
+  console.log(toBeSorted);
+  console.log(objectOfTruth);
+  console.log("To sort the list, use the function at willsUtils.resort(toBeSorted, objectOfTruth);")
+  console.log("I've done just that below.");
+  let tempArr = willsUtils.resort(toBeSorted, objectOfTruth);
+  console.log(tempArr);
+  console.log("The function is designed to leave out an element if its `keyOfTruth` property can't be found in the `objectOfTruth.order` list.");
+  console.log("But it will tell you when its done so.");
+  console.log("e.g.");
+  toBeSorted.push({ name: "Kyle", age: 49 })
+  console.log("Adding {name: \"Kyle\", age: 49} to the list");
+  console.log("And run method...");
+  willsUtils.resort(toBeSorted, objectOfTruth);
+  console.log("Gone but not forgotten!");
+  toBeSorted.pop();
+}
+function clickQuestionTwo() {
   willsUtils.questionTwo();
 }
 //Stuff for question two /\ /\ /\ /\ /\ /\ /\ /\ 
@@ -160,17 +156,17 @@ function clickQuestionTwo(){
   willsUtils.printChessBoard = printChessBoard;
 })();
 
-(function () {
-  willsUtils.questionThree = () => {
-    console.clear();
-    console.log("Question 3 doesn't have much of an explanation. It prints a fun chessboard.")
-    console.log("It does take an argument for whatever length square you'd like.");
-    console.log("But it defaults to 8");
-    console.log("You can see the chessboard by calling `willsUtils.printChessBoard([size]);`");
-    willsUtils.printChessBoard();
-  }
-})();
-function clickQuestionThree(){
+
+willsUtils.questionThree = () => {
+  console.clear();
+  console.log("Question 3 doesn't have much of an explanation. It prints a fun chessboard.")
+  console.log("It does take an argument for whatever length square you'd like.");
+  console.log("But it defaults to 8");
+  console.log("You can see the chessboard by calling `willsUtils.printChessBoard([size]);`");
+  willsUtils.printChessBoard();
+}
+
+function clickQuestionThree() {
   willsUtils.questionThree();
 }
-//Stuff for question three \/ \/ \/ \/ \/ \/ \/ \/
+//Stuff for question three /\ /\ /\ /\ /\ /\ /\ /\ 
