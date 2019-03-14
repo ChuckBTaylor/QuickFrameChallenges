@@ -15,7 +15,7 @@ myArr.name = "myArr";
 
 (function () {
   willsUtils.questionOne = () => {
-    clear();
+    console.clear();
     console.log("For Question 1, I have already declared a variable `myArr` that has come preloaded with `.map()`")
     console.log("myArr starts as: [1, 2, 4, 6, 10]");
     console.log("Below you see the result of myArr.map(it => it * it);");
@@ -31,6 +31,10 @@ myArr.name = "myArr";
     console.log("myNewArr.map(it => ...);")
   }
 })();
+
+function clickQuestionOne(){
+  willsUtils.questionOne();
+}
 //Stuff for question one /\ /\ /\ /\ /\ /\ /\ /\ 
 
 //Stuff for question two \/ \/ \/ \/ \/ \/ \/ \/
@@ -111,7 +115,7 @@ objectOfTruth.name = "objectOfTruth";
 
 (function () {
   willsUtils.questionTwo = () => {
-    clear();
+    console.clear();
     console.log("The console has come preloaded with two varibales: `toBeSorted` and `objectOfTruth`. See Below");
     console.log(toBeSorted);
     console.log(objectOfTruth);
@@ -130,26 +134,44 @@ objectOfTruth.name = "objectOfTruth";
     toBeSorted.pop();
   }
 })();
+function clickQuestionTwo(){
+  willsUtils.questionTwo();
+}
 //Stuff for question two /\ /\ /\ /\ /\ /\ /\ /\ 
 
 //Stuff for question three \/ \/ \/ \/ \/ \/ \/ \/
 (function () {
   const isSpaceEven = (column, row) => {
-    return ((column + row) % 2) === 0; 
+    return ((column + row) % 2) === 0;
   }
-  const printChessBoard = (size = 8) => {    
-    for(let x = 0; x < size; x++){
+  const printChessBoard = (size = 8) => {
+    for (let x = 0; x < size; x++) {
       let printString = "";
-      for(let y = 0; y < size; y++){
+      for (let y = 0; y < size; y++) {
         printString = printString.concat("|");
-        printString = printString.concat(isSpaceEven(x,y) ? "#" : " ");
+        printString = printString.concat(isSpaceEven(x, y) ? "#" : " ");
         printString = printString.concat("|")
-        if(y !== size - 1){
+        if (y !== size - 1) {
           printString = printString.concat(" ");
-        }        
+        }
       }
       console.log(printString);
     }
   }
   willsUtils.printChessBoard = printChessBoard;
 })();
+
+(function () {
+  willsUtils.questionThree = () => {
+    console.clear();
+    console.log("Question 3 doesn't have much of an explanation. It prints a fun chessboard.")
+    console.log("It does take an argument for whatever length square you'd like.");
+    console.log("But it defaults to 8");
+    console.log("You can see the chessboard by calling `willsUtils.printChessBoard([size]);`");
+    willsUtils.printChessBoard();
+  }
+})();
+function clickQuestionThree(){
+  willsUtils.questionThree();
+}
+//Stuff for question three \/ \/ \/ \/ \/ \/ \/ \/
